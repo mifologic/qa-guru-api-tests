@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id "io.freefair.lombok" version "6.0.0-m2"
 }
 
 group 'org.example'
@@ -9,15 +10,25 @@ repositories {
     mavenCentral()
 }
 
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
 def junitVersion = "5.8.2",
     slf4jVersion = '1.7.36',
-    restAssuredVersion = "5.1.0"
+    restAssuredVersion = "5.1.0",
+    jacksonVersion = "2.11.2",
+    lombokVersion = "1.18.10",
+    ownerVersion = "1.0.12"
 
 dependencies {
     testImplementation(
             "org.junit.jupiter:junit-jupiter:$junitVersion",
             "org.slf4j:slf4j-simple:$slf4jVersion",
-            "io.rest-assured:rest-assured:$restAssuredVersion"
+            "io.rest-assured:rest-assured:$restAssuredVersion",
+            "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion",
+            "org.projectlombok:lombok:$lombokVersion",
+            "org.aeonbits.owner:owner:$ownerVersion",
+
     )
 }
 
