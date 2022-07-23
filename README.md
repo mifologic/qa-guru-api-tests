@@ -56,8 +56,7 @@
 ## Allure отчет
 Результат прогона тестов можно посмотреть в отчёте. Информация в тесте представлена в виде шагов с действиями.
 
-<img src="/images/reports/allure_main.png">
-<img src="/images/reports/test_example.png">
+<img src="/images/reports/allure_report.png">
 
 ## Отчет в Telegram
 Результат прохождения тестов отправляется в Telegram с помощью бота. Пример сообщения с отчётом:
