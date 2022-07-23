@@ -1,6 +1,7 @@
 import io.restassured.http.ContentType;
 import models.UserData;
 import models.UsersCreation;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
@@ -9,6 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class ReqresTests {
 
     @Test
+    @DisplayName("Проверка имени и фамилии пользователя")
     void checkUserNameAndLastName() {
 
         int userId = 2;
@@ -25,6 +27,7 @@ public class ReqresTests {
     }
 
     @Test
+    @DisplayName("Проверка случая, когда пользователь не найден")
     void checkUserNotFound() {
         int userId = 23;
 
@@ -39,6 +42,7 @@ public class ReqresTests {
     }
 
     @Test
+    @DisplayName("Проверка создания пользователя")
     void userShouldBeCreated() {
 
         UsersCreation user = UsersCreation.builder().name("Beth").job("Manager").build();
@@ -57,6 +61,7 @@ public class ReqresTests {
     }
 
     @Test
+    @DisplayName("Проверка редактирования пользователя")
     void userJobShouldBeUpdated() {
 
         int userId = 162;
@@ -75,6 +80,7 @@ public class ReqresTests {
     }
 
     @Test
+    @DisplayName("Проверка удаления пользователя")
     void userShouldBeDeleted() {
 
         int userId = 2;
