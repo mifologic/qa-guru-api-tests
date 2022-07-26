@@ -1,3 +1,5 @@
+import io.qameta.allure.AllureId;
+import io.qameta.allure.Owner;
 import io.restassured.http.ContentType;
 import models.UserData;
 import models.UsersCreation;
@@ -10,7 +12,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class ReqresTests {
 
     @Test
+    @AllureId("11686")
     @DisplayName("Проверка имени и фамилии пользователя")
+    @Owner("allure8")
     void checkUserNameAndLastName() {
 
         int userId = 2;
@@ -27,7 +31,9 @@ public class ReqresTests {
     }
 
     @Test
-    @DisplayName("Проверка случая, когда пользователь не найден")
+    @AllureId("11687")
+    @DisplayName("Пользователь не найден")
+    @Owner("allure8")
     void checkUserNotFound() {
         int userId = 23;
 
@@ -42,7 +48,9 @@ public class ReqresTests {
     }
 
     @Test
-    @DisplayName("Проверка создания пользователя")
+    @AllureId("11688")
+    @DisplayName("Создание пользователя")
+    @Owner("allure8")
     void userShouldBeCreated() {
 
         UsersCreation user = UsersCreation.builder().name("Beth").job("Manager").build();
@@ -61,7 +69,9 @@ public class ReqresTests {
     }
 
     @Test
-    @DisplayName("Проверка редактирования пользователя")
+    @AllureId("11689")
+    @DisplayName("Редактирование пользователя")
+    @Owner("allure8")
     void userJobShouldBeUpdated() {
 
         int userId = 162;
@@ -80,7 +90,9 @@ public class ReqresTests {
     }
 
     @Test
-    @DisplayName("Проверка удаления пользователя")
+    @AllureId("11690")
+    @DisplayName("Удаление пользователя")
+    @Owner("allure8")
     void userShouldBeDeleted() {
 
         int userId = 2;
