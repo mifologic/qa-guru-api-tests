@@ -28,8 +28,7 @@ dependencies {
             "io.rest-assured:rest-assured:$restAssuredVersion",
             "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion",
             "org.projectlombok:lombok:$lombokVersion",
-            "org.aeonbits.owner:owner:$ownerVersion",
-
+            "org.aeonbits.owner:owner:$ownerVersion"
     )
 }
 
